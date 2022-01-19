@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 27 02:00:06 2021
+#just 1 car, cost simulator
 
+Created on Wed Oct 27 02:00:06 2021
 @author: mikko
 
 car cost simulator1
@@ -11,8 +12,6 @@ this is a third edit
 This is a 4th edit
 """
 
-#this is edit 2
-#this is edit 3
 
 dayLifeCount = 0 #how many days the car has been alive
 milesLifeCount = 0 #how many miles left on the car
@@ -24,46 +23,41 @@ averageMilesPerDay = 30000/365
 yearCounter = 0
 monthOfYearCounter = 0
 dayOfMonthCounter = 0#this will increase to 30 in the loop and then reset
-
-dayOfWeekCounter = 0
-
-
-
+dayOfWeekCounter = 0 #this will go to 12 then flip to 0
 
 
 
 #car costs
 bankAccountC1 = 0
-bankAccountC2 = 0
 
+#monthly payments for, loan, insurance, average maintaince bill, etc. This could definately be itemized out
 monthlyPaymentC1 = 0
-monthlyPaymentC2 = 300
 
+#what is the car's average MPG. This could be expanded out
 mpgC1 = 20
-mpgC2 = 30
-
-
 
 #this loop is designed to loop once per day and you need to ma
 while dayLifeCount < daysWhenJunked  and milesLifeCount < milesWhenJunked :
 
-
-    print(dayLifeCount)
-    print(dayOfMonthCounter)
+    #print calendar###########################################################
+    print(f"day of life:   {dayLifeCount}")
+    print(f"day of month:  {dayOfMonthCounter}")
+    print(f"month of year: {monthOfYearCounter}")
 
     if dayOfMonthCounter == 15:
-        bankAccountC2 = bankAccountC2 - monthlyPaymentC2
+        bankAccountC1 = bankAccountC1 - monthlyPaymentC1
 
     if dayOfWeekCounter == 6 :
         bankAccountC1 += 700
-        bankAccountC2 += 700
 
 
-    ############################################################################
-    #milage updater
+    #milage updater#############################################################
     milesLifeCount += averageMilesPerDay#this will go to milesWhenJunked(250,000) if nothing else stops it
 
-    #calendar updaters
+    #cost updaters##############################################################
+
+
+    #calendar updaters##########################################################
     dayLifeCount += 1 #this will go to 7300 if nothing stops it
     dayOfWeekCounter += 1
     if dayOfWeekCounter > 7:
@@ -73,8 +67,13 @@ while dayLifeCount < daysWhenJunked  and milesLifeCount < milesWhenJunked :
     dayOfMonthCounter += 1
     if dayOfMonthCounter > 30:
         dayOfMonthCounter = 1
+    
+    #update month of year
+    monthOfYearCounter += 1
+    if monthOfYearCounter > 12:
+      monthOfYearCounter = 1
+
 
 
 #final results
 print(bankAccountC1)
-print(bankAccountC2)
