@@ -1,7 +1,5 @@
 ##Math for a trip to europe
 
-
-
 ##this block of code helps you know when you have to start work and end work in NY vs Barcelona
 startWorkTimeNY = 7 #Your start time in NY
 quitWorkTimeNY = 6 #your quit time in NY
