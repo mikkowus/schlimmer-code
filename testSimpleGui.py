@@ -16,6 +16,6 @@ while True:
         break
     elif event == 'Ok':
       sg.Text('Hi')
-      print('You entered ', values[0])
+      print('You entered: ', values[0])
 
 window.close()
