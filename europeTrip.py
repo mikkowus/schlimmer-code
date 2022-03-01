@@ -17,4 +17,27 @@ if getOffWorkTimeBar > 12:
   getOffWorkTimeBar = getOffWorkTimeBar - 12
 
 print(f"time to start work in Barcelona: " + str(startWorkTimeBar) + " when starting at " + str(startWorkTimeNY) + " in NY")
+print(f"time to quit work in BarcY+timeDiffBarecelona
+
+#adujust start time to 12 hour clock from 24
+if startWorkTimeBar > 12:
+  startWorkTimeBar = startWorkTimeBar - 12
+
+#adjust get off time to 12 hour clock from 24
+if getOffWorkTimeBar > 12:
+  getOffWorkTimeBar = getOffWorkTimeBar - 12
+
+print(f"time to start work in Barcelona: " + str(startWorkTimeBar) + " when starting at " + str(startWorkTimeNY) + " in NY")
 print(f"time to quit work in Barcelona: " + str(getOffWorkTimeBar) + " when  quitting at " + str(quitWorkTimeNY) + " in NY")
+
+
+
+
+
+
+
+
+
+
+
+
